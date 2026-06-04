@@ -1,4 +1,3 @@
-
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("Dialogflow MCP")
@@ -8,3 +7,4 @@ def health():
     return {"status": "ok"}
 
 app = mcp.streamable_http_app()
+
