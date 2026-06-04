@@ -1,18 +1,8 @@
 from mcp.server.fastmcp import FastMCP
-from mcp.server.fastmcp.settings import Settings, TransportSecuritySettings
 import uvicorn
 import os
 
-settings = Settings(
-    transport_security=TransportSecuritySettings(
-        enable_dns_rebinding_protection=False
-    )
-)
-
-mcp = FastMCP(
-    "Dialogflow MCP",
-    settings=settings
-)
+mcp = FastMCP("Dialogflow MCP")
 
 @mcp.tool()
 def hello():
